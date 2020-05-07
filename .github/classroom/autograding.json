@@ -3,7 +3,7 @@
     {
       "name": "At least 10 triples",
       "setup": "",
-      "run": "python3 main.py",
+      "run": "python -c 'import main; main.at_least_10_triples()'",
       "input": "",
       "output": "",
       "comparison": "included",
