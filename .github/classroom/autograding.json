@@ -3,7 +3,7 @@
     {
       "name": "At least 10 triples",
       "setup": "",
-      "run": "main",
+      "run": "python3 main.py",
       "input": "",
       "output": "",
       "comparison": "included",
