@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "At least 10 triples",
+      "setup": "",
+      "run": "main",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
