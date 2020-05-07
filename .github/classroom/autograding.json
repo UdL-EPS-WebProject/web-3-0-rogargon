@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "At least 10 triples",
-      "setup": "sudo -H pip3 install pytest",
+      "setup": "sudo -H pip3 install -r requirements.txt",
       "run": "python3 -c 'import main; main.at_least_10_triples()'",
       "input": "",
       "output": "",
