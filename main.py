@@ -1,12 +1,12 @@
-from http.server import HTTPServer, CGIHTTPRequestHandler
-import threading
 from rdflib import Graph
 
 def start_server():
+    from http.server import HTTPServer, CGIHTTPRequestHandler
     httpd = HTTPServer(('', 8000), CGIHTTPRequestHandler)
     httpd.serve_forever()
 
 def run_daemon():
+  import threading
   daemon = threading.Thread(name='daemon_server', target=start_server)
   daemon.setDaemon(True)
   daemon.start()
