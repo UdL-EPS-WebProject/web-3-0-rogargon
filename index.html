@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<title>MyRestaurants - Bokoto</title>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="#">MyRecommendations</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/myrestaurants/">MyRestaurants <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+        
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/login/?next=/myrestaurants/restaurants/1">Login</a>
+            </li>
+        
+    </ul>
+  </div>
+</nav>
+
+<main id="content" class="container mt-3" resource="/myrestaurants/restaurants/1" vocab="http://schema.org/" typeof="Restaurant">
+    
+    <div class="row">
+        <h4 class="col" property="name">Bokoto</h4>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md">
+            <h5>Details</h5>
+            <div class="row">
+                <div class="col-sm-9">
+                    
+                    <div class="row">
+                        <div class="col-1">✉</div>
+                        <div class="col" property="address" typeof="PostalAddress">
+                          <span property="streetAddress">Magí Morera 57</span>, 
+                          <span property="addressLocality">Lleida</span>
+                          <br>
+                          <span property="addressRegion">Catalonia</span> 
+                          (<span property="addressCountry">Spain</span>)
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-1">☎</div>
+                        <div class="col" property="telephone"><a href="tel:+34 973 24 77 53">+34 973 24 77 53</a></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-1">🌐</div>
+                        <div class="col"><a property="url"href="http://www.lleida.bokoto.es">http://www.lleida.bokoto.es</a></div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-3 text-right align-bottom">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md mt-3" property="hasMenu" typeof="Menu">
+            <h5>Dishes</h5>
+            <div class="row">
+                <div class="col-sm-9">
+                    
+                        <p><a property="hasMenuItem" typeof="MenuItem" 
+                          class="dish-link" href="/myrestaurants/restaurants/1/dishes/1">
+                          <span property="name">Tuna Pokimaki</span>
+                        </a></p>
+                    
+                        <p><a property="hasMenuItem" typeof="MenuItem" 
+                          class="dish-link" href="/myrestaurants/restaurants/1/dishes/3">
+                          <span property="name">Veal Criollo</span>
+                        </a></p>
+                    
+                </div>
+                <div class="col-sm-3 text-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md">
+            <h5>Rating</h5>
+            
+            <p>
+                <strong>4.5</strong>
+                
+                    (average from 2 reviews)
+                
+            </p>
+            
+            <form action="/myrestaurants/restaurants/1/reviews/create" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="3YUXTtzWT4rO1g0JslwEXR3WUyTLXMzUFxOQ8rQGLxFbCC81BtQp6Y4c2vfCJE7A">
+                <div id="div_id_comment" class="form-group">
+                    <label for="id_comment" class="col-form-label ">Comment:</label>
+                    <textarea class="form-control" name="comment" id="id_comment" rows="2"></textarea>
+                </div>
+                <p>Rating:
+                    <span class="rating">
+                    
+                        <input type="radio" class="rating-input" id="rating-5" name="rating" value="5">
+                        <label for="rating-5" class="rating-star"></label>
+                    
+                        <input type="radio" class="rating-input" id="rating-4" name="rating" value="4">
+                        <label for="rating-4" class="rating-star"></label>
+                    
+                        <input type="radio" class="rating-input" id="rating-3" name="rating" value="3">
+                        <label for="rating-3" class="rating-star"></label>
+                    
+                        <input type="radio" class="rating-input" id="rating-2" name="rating" value="2">
+                        <label for="rating-2" class="rating-star"></label>
+                    
+                        <input type="radio" class="rating-input" id="rating-1" name="rating" value="1">
+                        <label for="rating-1" class="rating-star"></label>
+                    
+                    </span>
+                </p>
+                <div class="text-right">
+                    <button class="btn btn-success" type="submit">Add Review</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md">
+            <h5>Reviews</h5>
+            
+                <blockquote class="blockquote review">
+                    <small>
+                        <span class="rating">
+                          ★★★★★
+                        </span>
+                        
+                            ”<strong class="mb-0">The best Japanese in town 😋</strong>”
+                        <footer class="blockquote-footer text-center">Roberto, April 25, 2018</footer>
+                    </small>
+                </blockquote>
+            
+                <blockquote class="blockquote review">
+                    <small>
+                        <span class="rating">
+                          ★★★★☆
+                        </span>
+                        
+                            ”<strong class="mb-0">Really good Tuna Pokimaki</strong>”
+                        <footer class="blockquote-footer text-center">myrestaurants, April 25, 2018</footer>
+                    </small>
+                </blockquote>
+            
+        </div>
+    </div>
+
+</main>
+
+<div id="footer" class="footer">
+    
+    <div class="text-muted text-center">
+        Created by myrestaurants on April 17, 2018
+    </div>
+
+</div>
+
+<!-- Bootstrap JavaScripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body></html>
