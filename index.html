@@ -23,17 +23,17 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-        
+
             <li class="nav-item">
                 <a class="nav-link" href="/accounts/login/?next=/myrestaurants/restaurants/1">Login</a>
             </li>
-        
+
     </ul>
   </div>
 </nav>
 
 <main id="content" class="container mt-3" resource="/myrestaurants/restaurants/1" vocab="http://schema.org/" typeof="Restaurant">
-    
+
     <div class="row">
         <h4 class="col" property="name">Bokoto</h4>
     </div>
@@ -43,52 +43,52 @@
             <h5>Details</h5>
             <div class="row">
                 <div class="col-sm-9">
-                    
+
                     <div class="row">
                         <div class="col-1">✉</div>
                         <div class="col" property="address" typeof="PostalAddress">
-                          <span property="streetAddress">Magí Morera 57</span>, 
+                          <span property="streetAddress">Magí Morera 57</span>,
                           <span property="addressLocality">Lleida</span>
                           <br>
-                          <span property="addressRegion">Catalonia</span> 
+                          <span property="addressRegion">Catalonia</span>
                           (<span property="addressCountry">Spain</span>)
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-1">☎</div>
-                        <div class="col" property="telephone"><a href="tel:+34 973 24 77 53">+34 973 24 77 53</a></div>
+                        <div class="col" property="telephone"><a href="tel:+34%20973%2024%2077%2053">+34 973 24 77 53</a></div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-1">🌐</div>
                         <div class="col"><a property="url"href="http://www.lleida.bokoto.es">http://www.lleida.bokoto.es</a></div>
                     </div>
-                    
+
                 </div>
                 <div class="col-sm-3 text-right align-bottom">
-                    
+
                 </div>
             </div>
         </div>
         <div class="col-md mt-3" property="hasMenu" typeof="Menu">
             <h5>Dishes</h5>
             <div class="row">
-                <div class="col-sm-9">
-                    
-                        <p><a property="hasMenuItem" typeof="MenuItem" 
+                <div class="col-sm-9" rel="hasMenuItem" >
+
+                        <p><a typeof="MenuItem"
                           class="dish-link" href="/myrestaurants/restaurants/1/dishes/1">
                           <span property="name">Tuna Pokimaki</span>
                         </a></p>
-                    
-                        <p><a property="hasMenuItem" typeof="MenuItem" 
+
+                        <p><a typeof="MenuItem"
                           class="dish-link" href="/myrestaurants/restaurants/1/dishes/3">
                           <span property="name">Veal Criollo</span>
                         </a></p>
-                    
+
                 </div>
                 <div class="col-sm-3 text-right">
-                    
+
                 </div>
             </div>
         </div>
@@ -97,14 +97,12 @@
     <div class="row mt-3">
         <div class="col-md">
             <h5>Rating</h5>
-            
-            <p>
-                <strong>4.5</strong>
-                
-                    (average from 2 reviews)
-                
+
+            <p property="aggregateRating" typeof="AggregateRating">
+                <strong property="ratingValue">4.5</strong>
+                (average from <span property="reviewCount">2</span> reviews)
             </p>
-            
+
             <form action="/myrestaurants/restaurants/1/reviews/create" method="post">
                 <input type="hidden" name="csrfmiddlewaretoken" value="3YUXTtzWT4rO1g0JslwEXR3WUyTLXMzUFxOQ8rQGLxFbCC81BtQp6Y4c2vfCJE7A">
                 <div id="div_id_comment" class="form-group">
@@ -113,22 +111,22 @@
                 </div>
                 <p>Rating:
                     <span class="rating">
-                    
+
                         <input type="radio" class="rating-input" id="rating-5" name="rating" value="5">
                         <label for="rating-5" class="rating-star"></label>
-                    
+
                         <input type="radio" class="rating-input" id="rating-4" name="rating" value="4">
                         <label for="rating-4" class="rating-star"></label>
-                    
+
                         <input type="radio" class="rating-input" id="rating-3" name="rating" value="3">
                         <label for="rating-3" class="rating-star"></label>
-                    
+
                         <input type="radio" class="rating-input" id="rating-2" name="rating" value="2">
                         <label for="rating-2" class="rating-star"></label>
-                    
+
                         <input type="radio" class="rating-input" id="rating-1" name="rating" value="1">
                         <label for="rating-1" class="rating-star"></label>
-                    
+
                     </span>
                 </p>
                 <div class="text-right">
@@ -136,38 +134,42 @@
                 </div>
             </form>
         </div>
-        <div class="col-md">
+        <div class="col-md" rel="review">
             <h5>Reviews</h5>
-            
-                <blockquote class="blockquote review">
+
+                <blockquote class="blockquote review" typeof="Review">
                     <small>
-                        <span class="rating">
-                          ★★★★★
+                        <span class="rating" property="reviewRating" typeof="Rating">
+                            <span property="ratingValue" content="5">★★★★★</span>
                         </span>
-                        
-                            ”<strong class="mb-0">The best Japanese in town 😋</strong>”
-                        <footer class="blockquote-footer text-center">Roberto, April 25, 2018</footer>
+                            ”<strong class="mb-0" property="description">The best Japanese in town 😋</strong>”
+                        <footer class="blockquote-footer text-center">
+                            <span property="author">Roberto</span>,
+                            <span property="datePublished">April 25, 2018</span>
+                        </footer>
                     </small>
                 </blockquote>
-            
-                <blockquote class="blockquote review">
+
+                <blockquote class="blockquote review" typeof="Review">
                     <small>
-                        <span class="rating">
-                          ★★★★☆
+                        <span class="rating" property="reviewRating" typeof="Rating">
+                            <span property="ratingValue" content="4">★★★★☆</span>
                         </span>
-                        
-                            ”<strong class="mb-0">Really good Tuna Pokimaki</strong>”
-                        <footer class="blockquote-footer text-center">myrestaurants, April 25, 2018</footer>
+                            ”<strong class="mb-0" property="description">Really good Tuna Pokimaki</strong>”
+                        <footer class="blockquote-footer text-center">
+                            <span property="author">myrestaurants</span>,
+                            <span property="datePublished">April 25, 2018</span>
+                        </footer>
                     </small>
                 </blockquote>
-            
+
         </div>
     </div>
 
 </main>
 
 <div id="footer" class="footer">
-    
+
     <div class="text-muted text-center">
         Created by myrestaurants on April 17, 2018
     </div>
