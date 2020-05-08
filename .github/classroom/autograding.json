@@ -12,7 +12,7 @@
     },
     {
       "name": "More than 20 triples",
-      "setup": "sudo -H pip3 install -r requirements.txt",
+      "setup": "",
       "run": "python -m unittest test_main.Test.test_more_than_20_triples",
       "input": "",
       "output": "",
@@ -22,7 +22,7 @@
     },
     {
       "name": "More than 3 different types of resources",
-      "setup": "sudo -H pip3 install -r requirements.txt",
+      "setup": "",
       "run": "python -m unittest test_main.Test.test_more_than_3_different_types",
       "input": "",
       "output": "",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Graph depth 3 or more",
-      "setup": "sudo -H pip3 install -r requirements.txt",
+      "setup": "",
       "run": "python -m unittest test_main.Test.test_graph_depth_3_or_more",
       "input": "",
       "output": "",
