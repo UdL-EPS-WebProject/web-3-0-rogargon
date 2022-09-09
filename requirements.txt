@@ -1,2 +1,2 @@
-rdflib==4.2.2
-html5lib==1.0.1
+rdflib==6.2.0
+html5lib==1.1
